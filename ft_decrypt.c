@@ -1,15 +1,6 @@
 #include    <stdlib.h>
 #include    "ft_perso.h"
 
-int     ft_isnumber(char c)
-{
-        if ((c > 47) && (c < 58))
-            return (1);
-
-        else
-            return (0);
-}
-
 char*   ft_strdup(char *src)
 {
         char*   ret_str;
