@@ -11,7 +11,7 @@ The array is delimited by a 0 value;
 <code>Age|Name;Age2|Name2;Age3|Name3</code>
 
 • unfilled fields are not initialized
-<code>Age|;Age2|Name2;|Name3</code>
+(<code>Age|;Age2|Name2;|Name3</code>)
 
 ---
 
