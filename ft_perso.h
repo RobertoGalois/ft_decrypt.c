@@ -3,7 +3,7 @@
 typedef struct  s_perso
 {
         char*   name;
-        char*   age;
+        int     age;
 
 }               t_perso;
 #endif
