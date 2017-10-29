@@ -11,16 +11,16 @@ void    ft_showinfos(t_perso* perso)
 {
         printf("Personnage informations:\n");
         printf("Name: %s\n", perso->name);
-        printf("Age: %s\n", perso->age);
+        printf("Age: %d\n", perso->age);
 }
 
-t_perso*    ft_init_perso(char* p_name, char* p_age)
+t_perso*    ft_init_perso(char* p_name, int p_age)
 {
         t_perso*    ret;
 
         ret = (t_perso*)(malloc(sizeof (t_perso)));
         ret->name = strdup(p_name);
-        ret->age = strdup(p_age);
+        ret->age = p_age;
         return (ret);
 }
 
