@@ -13,6 +13,8 @@ The array is delimited by a 0 value;
 • unfilled fields are not initialized
 (<code>Age|;Age2|Name2;|Name3</code>)
 
+• Allowed function: malloc();
+
 ---
 
 Ecrire une fonction ft_decrypt. Cette fonction prendra une chaine de caractères en paramètre et la découpera en un tableau de structure t_perso. Le tableau sera délimité par un 0.
@@ -24,3 +26,5 @@ Ecrire une fonction ft_decrypt. Cette fonction prendra une chaine de caractères
 <code>Age|Nom;Age2|Nom2;Age3|Nom3</code>
 
 • Les champs non précisés ne seront pas initialisés
+
+• Fonction autorisée: malloc();
