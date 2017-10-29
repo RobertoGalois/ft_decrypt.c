@@ -1,6 +1,44 @@
 #include    <stdlib.h>
 #include    "ft_perso.h"
 
+int     ft_atoi(char *str)
+{
+        int     ret;
+        int     bool_is_neg;
+        int     count;
+
+        ret = 0;
+        bool_is_neg = 0;
+        count = 0;
+        while ((str[count] == ' ')
+                || (str[count] == '\t')
+                || (str[count] == '\n')
+                || (str[count] == '\v')
+                || (str[count] == '\f')
+                || (str[count] == '\r'))
+        {
+            count++;
+        }
+
+        if (str[count] == '-')
+            bool_is_neg = 1;
+
+        if (str[count] == '-' || str[count] == '+')
+            count++;
+
+        while ((str[count] > 47) && (str[count] < 58))
+        {
+            ret *= 10; 
+            ret += (str[count] - 48);
+            count++;
+        }
+
+        if (bool_is_neg == 0)
+            return (ret);
+        else
+            return (-ret);
+}
+
 char*   ft_strdup(char *src)
 {
         char*   ret_str;
@@ -91,7 +129,7 @@ t_perso     **ft_decrypt(char *str)
                 ret[count] = (t_perso*)(malloc(sizeof (t_perso)));
                 datas_struc = ft_split(datas_allstruc[count], '|');
                 if (datas_struc[0] != '\0')
-                    ret[count]->age = ft_strdup(datas_struc[0]);
+                    ret[count]->age = ft_atoi(datas_struc[0]);
 
                 if (datas_struc[1] != '\0')
                     ret[count]->name = ft_strdup(datas_struc[1]);
