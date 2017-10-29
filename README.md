@@ -1,6 +1,9 @@
 # ft_decrypt.c
 42 C exercice (http://www.42.fr/):
 
+<b>UPDATE: before the struct s_perso had the "age" param as String, 
+Here it is an Int.</b>
+
 Write the function ft_decrypt. This function take a string in argument and split it in an array t_perso*[].
 The array is delimited by a 0 value;
 
